@@ -1,7 +1,4 @@
 //jshint esversion:6
-
-//html /*将method上的东西post到我们的action里*/
-
 // the server that it's hosted on our own computer now
 // in the future, when deploy our server into the cloud or into someboday else's computer
 const express = require("express");
@@ -37,10 +34,10 @@ app.get("/bmicalculator", function(req, res){
     res.sendFile(__dirname + "/bmicalculator.html");
 });
 
-app.post("/bmiCalculator", function(req,res){
-    var someoneW = ParseFloat(req.body.weight);
-    var someoneH = ParseFloat(req.body.height);
-    var result2 = someoneH/(someoneW*someoneW);
+app.post("/bmicalculator", function(req,res){
+    var weight = parseFloat(req.body.weight);
+    var height = parseFloat(req.body.height);
+    var result2 = weight/(height*height);
 
     res.send("Your BMI is"+result2);
 })
