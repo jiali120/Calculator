@@ -32,6 +32,20 @@ app.post("/", function(req, res){
 
 
 
+// below the home route, we add some new route to our bmi calculator
+app.get("/bmicalculator", function(req, res){
+    res.sendFile(__dirname + "/bmicalculator.html");
+});
+
+app.post("/bmiCalculator", function(req,res){
+    var someoneW = ParseFloat(req.body.weight);
+    var someoneH = ParseFloat(req.body.height);
+    var result2 = someoneH/(someoneW*someoneW);
+
+    res.send("Your BMI is"+result2);
+})
+
+
 app.listen(3000, function(){
     console.log("server is running on port 3000.")
 });
