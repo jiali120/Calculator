@@ -8,7 +8,7 @@
 5. cd .. --- let it back one level
 6. mkdir --- build new folder
 7. touch --- creat new file
-8. open xxx.txt  ---  open a file
+8. open/start xxx.txt (ios use open but windows using start) ---  open a file
 9. atom .  --- open Atom application
 10. rm xxx.rtf   ---   delete file
 11. control+u   ---  clearn entire line
